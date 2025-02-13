@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/flowbite@3.1.2/dist/flowbite.min.js"></script>
+    <script src="./js/script.js" defer></script>
+  </head>
+  <body class="p-5">
+    <div class="flex flex-col items-center text-3xl py-4">
+      <h1>Quote Search</h1>
+    </div>
+
+    <form id="searchForm" class="mx-auto flex gap-3 p-4">
+      <select id="filterType" class="border border-gray-300 p-2 rounded-lg">
+        <option value="option">Choose an option</option>
+        <option value="id">Quote's ID</option>
+        <option value="title">Quote's Title</option>
+      </select>
+
+      <input
+        type="text"
+        id="search"
+        class="p-2 border border-gray-300 rounded-lg"
+        placeholder="Search..."
+        required
+      />
+
+      <button
+        type="submit"
+        class="text-white bg-blue-700 hover:bg-blue-800 p-2 rounded-lg"
+      >
+        Search
+      </button>
+    </form>
+
+    <div>
+      <h2 class="py-5 text-2xl">Quote List</h2>
+      <div id="imageContainer" class="grid grid-cols-3 gap-4">
+        <img
+          id="img1"
+          class="hidden h-70 rounded-lg"
+          src="./img/Rose.jpg"
+          alt="Rose"
+          data-title="Rose"
+          data-id="1"
+        />
+      </div>
+    </div>
+  </body>
+</html>
